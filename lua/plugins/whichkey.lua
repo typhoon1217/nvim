@@ -19,7 +19,8 @@ return {
             ['<leader>J'] = { name = '[J]ava', _ = 'which_key_ignore' },
             ['<leader>t'] = { name = '[T]ab', _ = 'which_key_ignore'},
             ['<leader>w'] = {name = '[W]indow', _ = 'which_key_ignore'},
-            ['<leader>y'] = {name = 'cod[Y]', _ = 'which_key_ignore'}
-        })
+            ['<leader>y'] = {name = 'cod[Y]', _ = 'which_key_ignore'},
+            ['<leader>m'] = {name = '[M]arkDown', _ = 'which_key_ignore'}
+          })
     end
 }

@@ -16,7 +16,7 @@ return {
         config = function()
             -- ensure that we have lua language server, typescript launguage server, java language server, and java test language server are installed
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "tsserver", "jdtls", "cssls" },
+                ensure_installed = { "lua_ls", "tsserver", "jdtls", "cssls", "marksman" },
             })
         end,
     },
@@ -63,9 +63,15 @@ return {
             lspconfig.ts_ls.setup({
                 capabilities = capabilities,
             })
-
+ 
+            -- setup the css language server
             lspconfig.cssls.setup({
                 capabilities = capabilities
+            })
+
+            -- setup the Markdown language server
+            lspconfig.marksman.setup({
+                capabilities = capabilities,
             })
 
             local default_diagnostic_config = {
